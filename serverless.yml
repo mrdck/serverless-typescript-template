@@ -1,0 +1,33 @@
+service: serverless-typescripts
+
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle
+  - serverless-jest-plugin
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+  environment:
+    NODE_ENV: ${env:NODE_ENV}
+
+functions:
+  health:
+    handler: src/health.health
+    events:
+      - http:
+          path: health
+          method: get
+  foo:
+    handler: src/foo.foo
+    events:
+      - http:
+          path: foo
+          method: post

@@ -1,0 +1,66 @@
+{
+  "name": "serverless-typescript-template",
+  "version": "1.0.0",
+  "author": "Mateusz Perlak",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "start": "serverless offline",
+    "build": "serverless package",
+    "lint": "eslint \"src/*.ts\"",
+    "test": "jest --coverage -i",
+    "deploy": "serverless deploy"
+  },
+  "devDependencies": {
+    "@middy/core": "^2.5.2",
+    "@middy/http-error-handler": "^2.5.2",
+    "@middy/http-json-body-parser": "^2.5.2",
+    "@middy/validator": "^2.5.2",
+    "@types/aws-lambda": "^8.10.84",
+    "@types/jest": "^27.0.2",
+    "@types/serverless-jest-plugin": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "aws-lambda": "^1.0.6",
+    "doctoc": "^2.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "http-status-codes": "^2.1.4",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.4",
+    "serverless": "^2.64.1",
+    "serverless-bundle": "^5.0.2",
+    "serverless-dotenv-plugin": "^3.10.0",
+    "serverless-jest-plugin": "^0.4.0",
+    "serverless-offline": "^8.2.0",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ],
+    "collectCoverageFrom": [
+      "src/*.{js,ts}",
+      "src/**/*.{js,ts}"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache",
+    "*.md": "doctoc --github --notitle"
+  }
+}
