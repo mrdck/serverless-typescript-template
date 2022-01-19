@@ -1,4 +1,5 @@
 service: serverless-typescript-template
+useDotenv: true
 
 package:
   individually: true
@@ -7,13 +8,17 @@ plugins:
   - serverless-bundle
   - serverless-jest-plugin
   - serverless-offline
-  - serverless-dotenv-plugin
+
+custom:
+  bundle:
+    excludeFiles: '**/*.test.ts'
 
 provider:
   name: aws
   runtime: nodejs14.x
   stage: dev
   region: us-east-1
+  lambdaHashingVersion: 20201221
 
   environment:
     NODE_ENV: ${env:NODE_ENV}
