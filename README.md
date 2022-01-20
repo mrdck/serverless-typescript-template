@@ -8,6 +8,7 @@
     - [Lint](#lint)
     - [Deployment](#deployment)
     - [Project Structure](#project-structure)
+    - [Dependency Injection (IoC)](#dependency-injection-ioc)
   - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -88,5 +89,29 @@ yarn deploy
 ├── tsconfig.json
 └── yarn.lock
 ```
+
+### Dependency Injection (IoC)
+Following template leverage Dependency Injection on inversify package that introduces Inversion of Control container.
+In `src/common/container` there is container component that serve purpose of Root Composite that hooks and instantiate all dependencies with container.
+
+This approach allow easy access on handler level
+```typescript
+// container with dependencies is available in context
+export async function handler(_: APIGatewayProxyEvent, { container }: Context): Promise<APIGatewayProxyResult> {
+  // get dependency bound to container
+  const config = container.get<Config>(Config)
+
+  if (config.foo) {
+    // some foo logic
+  }
+
+  return response(StatusCodes.OK, ReasonPhrases.OK)
+}
+
+// handler needs to be decorated with middleware otherwise container is not bound
+export const health = middleware(handler)
+```
+
+
 ## License
 MIT

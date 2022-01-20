@@ -3,8 +3,7 @@ import validator from '@middy/validator'
 import type { APIGatewayProxyResult, APIGatewayProxyEvent } from 'aws-lambda'
 import { StatusCodes } from 'http-status-codes'
 
-import { response } from './common'
-import { middleware } from './middleware'
+import { response, middleware } from './common'
 
 const schema = {
   type:       'object',
