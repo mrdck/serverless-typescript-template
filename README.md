@@ -18,7 +18,7 @@
 
 Using serverless
 ```bash
-$ serverless install --url https://github.com/mrdck/serverless-typescript-template --name serverless-application
+serverless install --url https://github.com/mrdck/serverless-typescript-template --name serverless-application
 ```
 
 Using git clone
