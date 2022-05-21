@@ -1610,12 +1610,12 @@
   dependencies:
     "@middy/util" "^2.5.7"
 
-"@middy/http-json-body-parser@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@middy/http-json-body-parser/-/http-json-body-parser-2.5.2.tgz#0b864aef27432ef79d9f833a2883b12ede17354e"
-  integrity sha512-gIbOklHnWQ1AHq9V8BGYel1ljQTx1jJANmVwgsyPlFZFjZqCt5phVuRYVdl3h/ZPzfqpz7r2hRV3IbN6orkh4g==
+"@middy/http-json-body-parser@2.5.7":
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/@middy/http-json-body-parser/-/http-json-body-parser-2.5.7.tgz#966dccc77ec5a0a163efe731b7c7007adf821513"
+  integrity sha512-6xysTWlK8s8QTVyQE9MfXR6fIY9h26uyiD1rM0mmYzGhLqWmamHgJvXzpBVXyRwOej451zSfjdSgKU66nxZmrw==
   dependencies:
-    "@middy/util" "^2.5.2"
+    "@middy/util" "^2.5.7"
 
 "@middy/util@^2.5.2":
   version "2.5.2"
