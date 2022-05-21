@@ -11228,10 +11228,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typesafe-api-gateway@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/typesafe-api-gateway/-/typesafe-api-gateway-1.0.0.tgz#35fb33f99f1601d1c06605bc96df9f66f1efc077"
-  integrity sha512-04FJ8pxlV4MpFUProTSyh+RBugpekCIDiLnFMtAaFArXQRxXKSkYw/zigtgvJ6WXwuElknqy5tdXnVT3cTXT6Q==
+typesafe-api-gateway@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/typesafe-api-gateway/-/typesafe-api-gateway-1.0.1.tgz#37731f1301833f13e8d85159de60ddcc9f5492bf"
+  integrity sha512-B49PtaoBpv0iHxqELDGEkJMvIpHwlLD8uf+Iq+i1Qk5AcRYCslsRvbAibEL6wLaFauTrmH6FIVQ6Zd2CCgXeSA==
 
 typescript@4.4.4, typescript@^4.2.4:
   version "4.4.4"
