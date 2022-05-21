@@ -1,33 +1,36 @@
----
 name: "ci"
 
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
   pull_request:
-    branches:
-      - master
+    types: [opened, synchronize]
+
 jobs:
   ci:
-    runs-on: "ubuntu-latest"
+   name: Build and Test
+      runs-on: "ubuntu-latest"
 
-    steps:
-      - uses: actions/checkout@v2
+      steps:
+        - name: Check out code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.18.0
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v3
+          with:
+            node-version: 14
+            cache: 'yarn'
 
-      - name: Install
-        run: yarn
+        - name: Install dependencies
+          run: yarn
 
-      - name: Build
-        run: yarn build
+        - name: Build
+          run: yarn build
 
-      - name: Lint
-        run: yarn lint
+        - name: Lint
+          run: yarn lint
 
-      - name: Test
-        run: yarn test
+        - name: Test
+          run: yarn test

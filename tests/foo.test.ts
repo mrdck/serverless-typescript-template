@@ -1,4 +1,4 @@
-import { lambdaWrapper } from 'serverless-jest-plugin'
+import { context } from 'serverless-plugin-test-helper'
 import { StatusCodes } from 'http-status-codes'
 import type { APIGatewayProxyEvent } from 'aws-lambda'
 
@@ -11,18 +11,22 @@ const proxyEventFactory = (body: unknown): APIGatewayProxyEvent<{ body: Foo }> =
 }
 
 describe('POST /foo', () => {
-  const endpoint = lambdaWrapper.wrap({ foo }, { handler: 'foo' })
-
   test('returns 400 HTTP', async () => {
-    const response = await endpoint.run(proxyEventFactory({ invalid: 'invalid' }))
+    const event = proxyEventFactory({ invalid: 'invalid' })
+    const handler = foo(event, context, jest.fn())
 
-    expect(response.statusCode).toEqual(StatusCodes.BAD_REQUEST)
-    expect(response.body).toEqual('Event object failed validation')
+    await expect(handler).resolves.toMatchObject({
+      body:       'Event object failed validation',
+      statusCode: StatusCodes.BAD_REQUEST,
+    })
   })
 
   test('returns 200 HTTP', async () => {
-    const response = await endpoint.run(proxyEventFactory({ bar: 'aaaa', foo: 'aaaaaaaaaaaaa' }))
+    const event = proxyEventFactory({ bar: 'aaaa', foo: 'aaaaaaaaaaaaa' })
+    const handler = foo(event, context, jest.fn())
 
-    expect(response.statusCode).toEqual(StatusCodes.OK)
+    await expect(handler).resolves.toMatchObject({
+      statusCode: StatusCodes.OK,
+    })
   })
 })

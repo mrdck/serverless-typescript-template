@@ -37,7 +37,7 @@ yarn start
 ```
 
 ### Testing
-Following template leverages testing on Jest framework with serverless jest plugin for running tests against serverless handlers.
+Following template leverages testing on Jest framework with serverless-plugin-test-helper for running tests against serverless handlers.
 ```bash
 yarn test
 ```
@@ -45,13 +45,13 @@ yarn test
 Code below shows example of test for validating health endpoint
 ```typescript
 describe('handler', () => {
-  const endpoint = lambdaWrapper.wrap(handler, { handler: 'health' })
-
   test('returns 200 HTTP', async () => {
-    const response = await endpoint.run({})
+    const handler = health(new ApiGatewayEvent(), context, jest.fn())
 
-    expect(response.statusCode).toEqual(StatusCodes.OK)
-    expect(response.body).toEqual(ReasonPhrases.OK)
+    await expect(handler).resolves.toMatchObject({
+      body:       ReasonPhrases.OK,
+      statusCode: StatusCodes.OK,
+    })
   })
 })
 
