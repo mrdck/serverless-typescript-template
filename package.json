@@ -12,7 +12,7 @@
     "deploy": "serverless deploy"
   },
   "devDependencies": {
-    "@middy/core": "2.5.2",
+    "@middy/core": "2.5.7",
     "@middy/http-error-handler": "2.5.2",
     "@middy/http-json-body-parser": "2.5.2",
     "@middy/validator": "2.5.2",
