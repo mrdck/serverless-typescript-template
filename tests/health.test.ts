@@ -1,16 +1,15 @@
-import { lambdaWrapper } from 'serverless-jest-plugin'
 import { StatusCodes, ReasonPhrases } from 'http-status-codes'
-import { APIGatewayProxyEvent } from 'aws-lambda'
+import { context, ApiGatewayEvent } from 'serverless-plugin-test-helper'
 
-import * as handler from '../src/health'
+import { health } from '../src/health'
 
 describe('GET /health', () => {
-  const endpoint = lambdaWrapper.wrap(handler, { handler: 'health' })
-
   test('returns 200 HTTP', async () => {
-    const response = await endpoint.run({} as unknown as APIGatewayProxyEvent)
+    const handler = health(new ApiGatewayEvent(), context, jest.fn())
 
-    expect(response.statusCode).toEqual(StatusCodes.OK)
-    expect(response.body).toEqual(ReasonPhrases.OK)
+    await expect(handler).resolves.toMatchObject({
+      body:       ReasonPhrases.OK,
+      statusCode: StatusCodes.OK,
+    })
   })
 })
