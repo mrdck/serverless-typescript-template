@@ -21,7 +21,7 @@
     "@typescript-eslint/eslint-plugin": "5.1.0",
     "@typescript-eslint/parser": "5.1.0",
     "aws-lambda": "1.0.7",
-    "doctoc": "2.1.0",
+    "doctoc": "2.2.0",
     "dotenv": "14.2.0",
     "env-var": "7.1.1",
     "eslint": "7.32.0",
