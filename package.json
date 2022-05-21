@@ -14,7 +14,7 @@
   "devDependencies": {
     "@middy/core": "2.5.7",
     "@middy/http-error-handler": "2.5.7",
-    "@middy/http-json-body-parser": "2.5.2",
+    "@middy/http-json-body-parser": "2.5.7",
     "@middy/validator": "2.5.2",
     "@types/aws-lambda": "8.10.84",
     "@types/jest": "27.0.2",
