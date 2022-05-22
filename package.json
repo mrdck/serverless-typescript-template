@@ -40,7 +40,7 @@
     "serverless-bundle": "5.3.0",
     "serverless-plugin-test-helper": "2.6.4",
     "serverless-offline": "8.8.0",
-    "ts-jest": "27.0.7",
+    "ts-jest": "27.1.5",
     "typesafe-api-gateway": "1.0.1",
     "typescript": "4.4.4"
   },
