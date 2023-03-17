@@ -5031,10 +5031,10 @@ entities@^3.0.1:
   resolved "https://registry.yarnpkg.com/entities/-/entities-3.0.1.tgz#2b887ca62585e96db3903482d336c1006c3001d4"
   integrity sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==
 
-env-var@7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/env-var/-/env-var-7.1.1.tgz#c1697f8dfded0b54418dc9bbd78a82119910e57c"
-  integrity sha512-4+vvlq+wwGQNwY/nI3/+Ojc1MKHCmITRJ6VWkQzDtMD6fAEb60ACRUCnlIAonMKW9YzqYmYxbyVu9vTb++yNRg==
+env-var@7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/env-var/-/env-var-7.3.0.tgz#34c744ca8fe72b8b2a70509ab047a10e3ae44aae"
+  integrity sha512-qwtwYJ9d3XFxXRDudPEAMszaggpDgcfb1ZGYb9/cNyMugN2/a8EtviopnRL6c+petj2vp6/gxwYd9ExL1/iPcw==
 
 env-variable@0.0.x:
   version "0.0.6"
