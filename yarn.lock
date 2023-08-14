@@ -11119,10 +11119,10 @@ serverless-webpack@^5.6.1:
   optionalDependencies:
     ts-node ">= 8.3.0"
 
-serverless@2.72.3:
-  version "2.72.3"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.72.3.tgz#de01203633ef7192c069b5a015aaf46e965cfa96"
-  integrity sha512-Fy/0IFXe2oJLvxQhiNVwwPQZPl2EzfVmxS+FqZbkw4z37MM/yKVRhIHzlJ5Wfnt9VCptgVAACiTJkjYB4jSrcg==
+serverless@2.72.4:
+  version "2.72.4"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.72.4.tgz#e17ae78c443019808438208ff99c01879d34a37a"
+  integrity sha512-npyccTOEEqPI25PwXs4r7qsTVvzYjWA1yBp9pBo7I29IpTcgVYv0CoLLR7K4yy7cf2E75TPYzVAxgtWAC8CdAQ==
   dependencies:
     "@serverless/cli" "^1.6.0"
     "@serverless/components" "^3.18.2"
