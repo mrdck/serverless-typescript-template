@@ -16,7 +16,7 @@
     "@middy/http-error-handler": "2.5.7",
     "@middy/http-json-body-parser": "2.5.7",
     "@middy/validator": "2.5.7",
-    "@types/aws-lambda": "8.10.121",
+    "@types/aws-lambda": "8.10.124",
     "@types/jest": "27.5.2",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
