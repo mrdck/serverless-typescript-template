@@ -35,7 +35,7 @@
     "inversify": "6.0.2",
     "jest": "27.5.1",
     "lint-staged": "11.2.6",
-    "reflect-metadata": "0.1.13",
+    "reflect-metadata": "0.2.2",
     "serverless": "2.72.4",
     "serverless-bundle": "5.5.0",
     "serverless-plugin-test-helper": "2.6.4",
