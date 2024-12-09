@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "5.62.0",
     "aws-lambda": "1.0.7",
     "doctoc": "2.2.1",
-    "dotenv": "14.3.2",
+    "dotenv": "16.4.7",
     "env-var": "7.5.0",
     "eslint": "7.32.0",
     "eslint-config-standard": "16.0.3",
