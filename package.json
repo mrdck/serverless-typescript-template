@@ -34,7 +34,7 @@
     "husky": "7.0.4",
     "inversify": "6.1.6",
     "jest": "27.5.1",
-    "lint-staged": "11.2.6",
+    "lint-staged": "15.2.11",
     "reflect-metadata": "0.2.2",
     "serverless": "2.72.4",
     "serverless-bundle": "5.5.0",
